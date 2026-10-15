@@ -1,0 +1,37 @@
+/* Style général de la page */
+
+body {
+    background-color: #050806;
+    color: #e3eee6;
+    font-family: Consolas, monospace;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Contenu principal */
+
+main {
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 20px;
+}
+
+/* Titre principal */
+
+h1 {
+    color: #46ef95;
+    font-size: 42px;
+}
+
+/* Paragraphes */
+
+p {
+    margin-bottom: 20px;
+}
+
+/* Lien de démarrage */
+
+a {
+    color: #46ef95;
+}
