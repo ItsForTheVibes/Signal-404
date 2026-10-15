@@ -1,5 +1,5 @@
-/* Style général de la page */
 
+/* Bouton de démarrage */
 body {
     background-color: #050806;
     color: #e3eee6;
@@ -8,30 +8,29 @@ body {
     line-height: 1.6;
     margin: 0;
 }
-
-/* Contenu principal */
-
-main {
-    max-width: 800px;
-    margin: 80px auto;
-    padding: 20px;
-}
-
-/* Titre principal */
-
 h1 {
     color: #46ef95;
     font-size: 42px;
 }
+.btn {
+    display: inline-block;
+    padding: 15px 25px;
+    margin-top: 20px;
 
-/* Paragraphes */
+    color: #46ef95;
+    background-color: transparent;
+    border: 2px solid #46ef95;
 
-p {
-    margin-bottom: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+
+    transition: 0.2s;
 }
 
-/* Lien de démarrage */
+/* Effet quand la souris passe sur le bouton */
 
-a {
-    color: #46ef95;
+.btn:hover {
+    background-color: #46ef95;
+    color: #050806;
 }
