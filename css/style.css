@@ -34,3 +34,21 @@ h1 {
     background-color: #46ef95;
     color: #050806;
 }
+
+
+/* Bloc de messages système */
+
+.terminal {
+    background-color: #0a120d;
+    border: 1px solid #244b35;
+    padding: 20px;
+    margin: 25px 0;
+}
+
+/* Messages dans le terminal */
+
+.terminal p {
+    color: #46ef95;
+    font-size: 14px;
+    margin: 5px 0;
+}
