@@ -20,7 +20,7 @@ main {
     padding: 20px;
 }
 
-/* Titres */
+/* Titres et paragraphes */
 
 h1 {
     color: #46ef95;
@@ -148,6 +148,18 @@ p {
 .log {
     color: #46ef95;
     font-size: 14px;
+}
+
+/* ========================================
+   ARCHIVE MEMOIRE - PASSE.HTML
+======================================== */
+
+.archive {
+    border-left: 2px solid #244b35;
+}
+
+.archive .scene-id {
+    letter-spacing: 2px;
 }
 
 /* ========================================
