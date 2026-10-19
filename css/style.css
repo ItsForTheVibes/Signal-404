@@ -174,3 +174,40 @@ p {
         display: block;
     }
 }
+
+
+/* ========================================
+   BOUTON SON ON / OFF
+======================================== */
+
+.bouton-son {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    padding: 10px 15px;
+    background-color: #0a120d;
+    color: #46ef95;
+    border: 1px solid #46ef95;
+    font-family: Consolas, monospace;
+    font-size: 13px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.bouton-son:hover {
+    background-color: #46ef95;
+    color: #050806;
+}
+
+@media (max-width: 600px) {
+    .bouton-son {
+        top: 10px;
+        right: 10px;
+        padding: 7px 10px;
+        font-size: 11px;
+    }
+
+    main {
+        margin-top: 65px;
+    }
+}
