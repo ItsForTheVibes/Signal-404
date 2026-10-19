@@ -5,10 +5,17 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.appendChild(boutonSon);
 
     const sons = {
+        ambiance: new Audio("audio/ambiance.mp3"),
         message: new Audio("audio/message.mp3"),
         alerte: new Audio("audio/alerte.mp3"),
         decision: new Audio("audio/decision.mp3")
     };
+
+    sons.ambiance.loop = true;
+    sons.ambiance.volume = 0.2;
+    sons.message.volume = 0.4;
+    sons.alerte.volume = 0.6;
+    sons.decision.volume = 0.3;
 
     let sonActif = localStorage.getItem("signal404_son") === "on";
 
@@ -29,7 +36,16 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    function demarrerAmbiance() {
+        if (sonActif && sons.ambiance.paused) {
+            sons.ambiance.play().catch(function () {
+                // Un clic peut être nécessaire pour lancer le son.
+            });
+        }
+    }
+
     actualiserBouton();
+    demarrerAmbiance();
 
     boutonSon.addEventListener("click", function () {
         sonActif = !sonActif;
@@ -37,8 +53,14 @@ document.addEventListener("DOMContentLoaded", function () {
         actualiserBouton();
 
         if (sonActif) {
-            jouerSon("message");
+            demarrerAmbiance();
+        } else {
+            sons.ambiance.pause();
         }
+    });
+
+    document.addEventListener("click", function () {
+        demarrerAmbiance();
     });
 
     document.querySelectorAll("a.btn").forEach(function (lien) {
@@ -48,9 +70,9 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             event.preventDefault();
+            jouerSon("decision");
 
             const destination = lien.href;
-            jouerSon("decision");
 
             setTimeout(function () {
                 window.location.href = destination;
